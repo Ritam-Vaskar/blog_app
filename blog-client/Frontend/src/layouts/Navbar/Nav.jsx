@@ -51,8 +51,6 @@ const Navbar = () => {
           </Link>
         )}
         <Link to="/">Home</Link>
-        <Link to="/about">About</Link>
-        <Link to="/contact">Contact</Link>
         {user && (
           <button className="create-blog-button" onClick={() => navigate('/create-blog')}>
             Create Blog

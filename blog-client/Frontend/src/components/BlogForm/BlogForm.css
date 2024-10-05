@@ -1,51 +1,90 @@
-.blog-form-container {
-  width: 50%;
-  margin: 0 auto;
+/* BlogForm container */
+.blog-form {
+  max-width: 600px;
+  margin: 50px auto;
   padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
   background-color: #f9f9f9;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
 }
 
-.blog-form-container h2 {
+.blog-form h2 {
   text-align: center;
+  color: #333;
+  font-size: 2rem;
   margin-bottom: 20px;
 }
 
-.blog-form-container label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
+.blog-form .form-group {
+  margin-bottom: 20px;
 }
 
-.blog-form-container input[type="text"],
-.blog-form-container textarea {
+.blog-form .form-group label {
+  display: block;
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.blog-form .form-group input,
+.blog-form .form-group textarea {
   width: 100%;
   padding: 10px;
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
+  font-size: 1rem;
+  border: 1px solid #ddd;
   border-radius: 5px;
   box-sizing: border-box;
+  transition: border-color 0.3s ease;
 }
 
-.blog-form-container .blog-image-preview {
-  width: 150px;
+.blog-form .form-group input:focus,
+.blog-form .form-group textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.blog-form .form-group textarea {
+  resize: vertical;
   height: 150px;
-  display: block;
-  margin: 10px 0;
 }
 
-.blog-form-container .submit-button {
-  display: block;
+/* Button styling */
+.blog-form button {
   width: 100%;
-  padding: 10px;
+  padding: 12px;
   background-color: #007bff;
-  color: white;
   border: none;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
   border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.blog-form-container .submit-button:hover {
+.blog-form button:hover {
   background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .blog-form {
+    padding: 15px;
+  }
+
+  .blog-form h2 {
+    font-size: 1.5rem;
+  }
+
+  .blog-form .form-group input,
+  .blog-form .form-group textarea {
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+
+  .blog-form button {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
 }

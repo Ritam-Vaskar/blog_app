@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './BlogForm.css'; // Ensure you have your CSS for styling
+import './BlogForm.css';
 import SummaryApi from '../../common';
 import { toast } from 'react-toastify';
 

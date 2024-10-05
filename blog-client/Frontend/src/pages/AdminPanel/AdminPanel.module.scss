@@ -1,62 +1,115 @@
 .adminPanel {
-    padding: 20px;
-    background-color: #f9f9f9; // Light background for contrast
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); // Soft shadow for depth
-    max-width: 800px; // Maximum width for content
-    margin: 20px auto; // Center alignment with margin
-
-    h2 {
-        text-align: center; // Center the title
-        margin-bottom: 20px; // Space below the title
-        color: #333; // Darker color for better readability
-    }
-
-    .adminPanelList {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 15px; // Space between items
-    }
-
-    .adminPanelItem {
-        background-color: #fff; // White background for each post
-        // padding: 15px;
-        border: 1px solid #ddd; // Light border for separation
-        border-radius: 6px; // Rounded corners
-        transition: box-shadow 0.3s; // Smooth transition for hover effect
-        width: 350px;
-
-        &:hover {
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); // Elevated shadow on hover
-        }
-
-        h3 {
-            margin: 0 0 10px 0; // Margin below the title
-            color: #007BFF; // Primary color for titles
-        }
-
-        p {
-            margin: 10px 0; // Margin for paragraphs
-            color: #555; // Grey color for content text
-            line-height: 1.6; // Increased line height for readability
-        }
-
-        img {
-            max-width: 100%; // Responsive image size
-            height: auto; // Maintain aspect ratio
-            border-radius: 4px; // Rounded corners for images
-        }
-    }
-
-    .error {
-        color: #ff4d4d; // Red color for error messages
-        text-align: center; // Center error messages
-        margin-bottom: 20px; // Space below error message
-    }
-}
-.changes{
     display: flex;
-    font-weight: 500;
-    padding: 5px;
-    cursor: pointer;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f5f5f5;
+  }
+  
+  .adminPanelList {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  .adminPanelItem {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    position: relative;
+    padding-top: 50px; /* Space for the buttons */
+    width: 33%;
+    height: 25rem;
+    overflow-y: scroll;
+
+ 
+  
+    h3 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      color: #333;
+    }
+  
+    p {
+      font-size: 1rem;
+      color: #666;
+    }
+  
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 5px;
+      margin-top: 15px;
+    }
+  }
+
+  
+  .changes {
+    display: flex;
+    gap: 15px;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+  
+    svg {
+      cursor: pointer;
+      font-size: 100px;
+      transition: transform 0.2s;
+      margin-top: 10px;
+      width: 100%;
+    }
+  
+    svg:hover {
+      transform: scale(1.5);
+    }
+  }
+  
+  .error {
+    color: red;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  .noPostsMessage {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #999;
+  }
+  
+  .adminPanel {
+    padding: 20px;
+}
+
+.adminPanelList {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.adminPanelItem {
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 8px;
+    position: relative; /* Position relative for proper button placement */
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: space-between; /* Space between buttons */
+    margin-top: 10px; /* Add some space above the buttons */
+}
+
+.buttonContainer a,
+.buttonContainer svg {
+    cursor: pointer; /* Change cursor for better UX */
+    transition: transform 0.2s; /* Transition effect for hover */
+}
+
+.buttonContainer a:hover,
+.buttonContainer svg:hover {
+    transform: scale(1.5); /* Scale up on hover */
 }

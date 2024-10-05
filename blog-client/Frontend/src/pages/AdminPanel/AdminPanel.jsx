@@ -1,4 +1,4 @@
-import React, { useEffect, useState,useContext } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import SummaryApi from '../../common';
 import styles from './AdminPanel.module.scss';
 import { MdEdit, MdDeleteForever } from "react-icons/md";
@@ -72,15 +72,14 @@ const AdminPanel = () => {
                             posts.map((post, index) => (
                                 <div className={styles.adminPanelItem} key={post.id || index}>
                                     <h3>{post.title}</h3>
-                                    <p>{post.content}</p>
+                                    
                                     {post.image && <img src={post.image} alt={post.title} />}
-                                    <div className={styles.changes}>
+                                    <p>{post.content}</p>
+                                    {/* Button div moved below the content */}
+                                    <div className={styles.buttonContainer}>
                                         <Link to={`/user-details/edit/${post._id}`}>
-                                            <MdEdit
-                                                style={{ color: 'blue', fontSize: '20px' }}
-                                            />
+                                            <MdEdit style={{ color: 'blue', fontSize: '20px' }} />
                                         </Link>
-
                                         <MdDeleteForever
                                             style={{ color: 'red', fontSize: '20px' }}
                                             onClick={() => handleDelete(post._id)}

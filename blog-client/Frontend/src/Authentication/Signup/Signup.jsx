@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 // import authService from '../Auth/Authservice'; // Adjust the path as necessary
-import '../Login/Login.css'; // Assuming you have created a Login.css file
+import './Signup.css'; // Assuming you have created a Login.css file
 import SummaryApi from '../../common/index';
 import { toast } from 'react-toastify';
 
